@@ -3,6 +3,6 @@
 ##
 
 sudo systemctl start osmosisd
-sudo systemctl start lumd
+sudo systemctl start cyber
 sudo systemctl start kid
 sudo systemctl start gaiad

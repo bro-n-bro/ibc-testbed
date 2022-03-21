@@ -7,8 +7,8 @@
 echo '[INFO] Sending 1Mi OSMO to relayer...'
 osmosisd tx bank send $(osmosisd keys show $IBC_KEY -a --home $OSMOSISD_HOME --keyring-backend test) $(rly keys show $OSMOSIS_CHAIN_ID $RLY_KEY --home $RELAYER_HOME) 1000000000000uosmo --chain-id $OSMOSIS_CHAIN_ID --home $OSMOSISD_HOME --keyring-backend test --broadcast-mode block --node $OSMOSIS_RPC --yes
 
-echo '[INFO] Sending 1Mi LUM to relayer...'
-lumd tx bank send $(lumd keys show $IBC_KEY -a --home $LUMD_HOME --keyring-backend test) $(rly keys show $LUM_CHAIN_ID $RLY_KEY --home $RELAYER_HOME) 1000000000000ulum --chain-id $LUM_CHAIN_ID --home $LUMD_HOME --keyring-backend test --broadcast-mode block --node $LUM_RPC --yes
+echo '[INFO] Sending 1Mi CYBER to relayer...'
+cyber tx bank send $(cyber keys show $IBC_KEY -a --home $CYBER_HOME --keyring-backend test) $(rly keys show $CYBER_CHAIN_ID $RLY_KEY --home $RELAYER_HOME) 1000000000000boot --chain-id $CYBER_CHAIN_ID --home $CYBER_HOME --keyring-backend test --broadcast-mode block --node $CYBER_RPC --yes
 
 echo '[INFO] Sending 1Mi XKI to relayer...'
 kid tx bank send $(kid keys show $IBC_KEY -a --home $KID_HOME --keyring-backend test) $(rly keys show $KI_CHAIN_ID $RLY_KEY --home $RELAYER_HOME) 1000000000000uxki --chain-id $KI_CHAIN_ID --home $KID_HOME --keyring-backend test --broadcast-mode block --node $KI_RPC --yes
@@ -32,10 +32,10 @@ rly tx connection cosmos-osmosis --home $RELAYER_HOME
 sleep 5
 rly tx link cosmos-osmosis --home $RELAYER_HOME
 
-echo '[INFO] Initializing Lum <> Osmosis relayer...'
-rly paths generate $LUM_CHAIN_ID $OSMOSIS_CHAIN_ID lum-osmosis --home $RELAYER_HOME
-rly tx clients lum-osmosis --home $RELAYER_HOME
+echo '[INFO] Initializing Cyber <> Osmosis relayer...'
+rly paths generate $CYBER_CHAIN_ID $OSMOSIS_CHAIN_ID cyber-osmosis --home $RELAYER_HOME
+rly tx clients cyber-osmosis --home $RELAYER_HOME
 sleep 5
-rly tx connection lum-osmosis --home $RELAYER_HOME
+rly tx connection cyber-osmosis --home $RELAYER_HOME
 sleep 5
-rly tx link lum-osmosis --home $RELAYER_HOME
+rly tx link cyber-osmosis --home $RELAYER_HOME

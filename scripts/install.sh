@@ -28,12 +28,11 @@ git checkout v6.0.0
 make install
 cd ..
 
-echo '[INFO] Installing Lum Network binary...'
-git clone https://github.com/lum-network/chain.git lum
-cd lum
-git checkout v1.0.5
-go mod tidy
-make install
+echo '[INFO] Installing Cyber Network binary...'
+git clone https://github.com/cybercongress/go-cyber.git cyber
+cd cyber
+git checkout v0.2.0
+make install CUDA_ENABLED=false 
 cd ..
 
 echo '[INFO] Installing Ki binary...'
@@ -74,6 +73,6 @@ echo '[INFO] Installing networks daemons...'
 sudo cp ./daemons/* /etc/systemd/system/.
 sudo systemctl daemon-reload
 sudo systemctl enable osmosisd
-sudo systemctl enable lumd
+sudo systemctl enable cyber
 sudo systemctl enable kid
 sudo systemctl enable gaiad

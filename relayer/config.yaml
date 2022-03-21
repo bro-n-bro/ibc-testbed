@@ -4,12 +4,12 @@ global:
   light-cache-size: 20
 chains:
   - key: rly-testbed-key
-    chain-id: lum-ibctest-1
+    chain-id: bostrom-ibctest-1
     rpc-addr: http://127.0.0.1:26657
-    account-prefix: lum
+    account-prefix: bostrom
     gas-adjustment: 2.0
-    gas-prices: 0.00001ulum
-    trusting-period: 36000s
+    gas-prices: 0.0001boot
+    trusting-period: 3000s
   - key: rly-testbed-key
     chain-id: osmosis-ibctest-1
     rpc-addr: http://127.0.0.1:36657
