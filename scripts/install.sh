@@ -24,7 +24,7 @@ cd ./tmp
 echo '[INFO] Installing Osmosis binary...'
 git clone https://github.com/osmosis-labs/osmosis
 cd osmosis
-git checkout v6.0.0
+git checkout v7.0.4
 make install
 cd ..
 
@@ -42,10 +42,10 @@ git checkout -b v2.0.1 tags/2.0.1
 make install
 cd ..
 
-echo '[INFO] Installing Gaiad binary...'
+echo '[INFO] Installing Gaiad binarsh run.sh test-revive-relayy...'
 git clone https://github.com/cosmos/gaia
 cd gaia
-git checkout v5.0.2
+git checkout v6.0.4
 make install
 cd ..
 

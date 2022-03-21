@@ -4,7 +4,7 @@ global:
   light-cache-size: 20
 chains:
   - key: rly-testbed-key
-    chain-id: bostrom-ibc-testbed-1
+    chain-id: bostrom-ibctest-1
     rpc-addr: http://127.0.0.1:26657
     account-prefix: bostrom
     gas-adjustment: 2.0
