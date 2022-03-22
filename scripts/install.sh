@@ -6,7 +6,7 @@ echo '[INFO] Initializing environment...'
 . ./.env
 
 echo '[INFO] Installing build essentials...'
-sudo apt-get install build-essential --yes
+sudo apt-get install make build-essential --yes
 
 echo '[INFO] Installing go v1.17.2...'
 wget -q -O - https://git.io/vQhTU | bash -s -- --version 1.17.2

@@ -47,7 +47,6 @@ request_transfers() {
 
     echo '[INFO] Transferring coins from Cosmos to Osmosis...'
     if rly tx transfer $COSMOS_CHAIN_ID $OSMOSIS_CHAIN_ID 1uatom $(osmosisd keys show $IBC_KEY -a --home $OSMOSISD_HOME --keyring-backend test) --path cosmos-osmosis --home $RELAYER_HOME >/dev/null 2>&1; then
-        gaiad query bank balances $(gaiad keys show $IBC_KEY -a --home $GAIAD_HOME --keyring-backend test) --node $COSMOS_RPC
         echo "[INFO] Transaction accepted"
     else
         echo "[INFO] Transaction rejected"
