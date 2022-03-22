@@ -11,7 +11,7 @@ The goal of this repository is to provide a testbed for IBC integrations and mul
     -   Osmosis
     -   Cosmos Hub
     -   Ki chain
--   Create IBC channels to Osmosis
+-   Create IBC channels to Cosmos
     -   Cyber <> Cosmos
     -   Ki <> Cosmos
     -   Cosmos <> Osmosis
@@ -53,7 +53,7 @@ sudo apt-get install git --yes
 ## Clone this repository
 
 ```sh
-git clone https://github.com/lum-network/ibc-testbed.git
+git clone https://github.com/bro-n-bro/ibc-testbed.git
 ```
 
 ## Move into the repository
